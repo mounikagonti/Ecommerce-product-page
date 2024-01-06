@@ -1,0 +1,28 @@
+@mixin displayCenter($aline-items, $justify-content) {
+  display: flex;
+  align-items: $aline-items;
+  justify-content: $justify-content;
+}
+
+@mixin border($width, $color) {
+  border: $width solid $color;
+}
+
+@mixin text-shadow($h-shadow, $v-shadow, $blur_radius, $color) {
+  text-shadow: $h-shadow $v-shadow $blur_radius $color;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
+$text_color: #706c6c;
+$brand_color: #ff7d1b;
+$white_color: #ffffff;
+$black_color: #1c1e1d;
+
+
+// box shadow
+// #ece41a
+$box_shadow: 0 8px 8px -4px rgb(74, 177, 200);

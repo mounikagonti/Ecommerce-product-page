@@ -1,0 +1,188 @@
+.homepage {
+  max-width: 1320px;
+  margin: auto;
+  @include displayCenter(center, center);
+  gap: 100px;
+  padding: 4.5rem;
+  .homepage_left {
+    .homepage_left_top {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      .arrow_icons {
+        display: none !important;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        @include displayCenter(center, space-between);
+        .left_arrow {
+          position: absolute;
+          left: 10px;
+          width: 40px;
+          height: 40px;
+          background-color: $white_color;
+          @include displayCenter(center, center);
+          border-radius: 50%;
+          border: none;
+        }
+        .right_arrow {
+          position: absolute;
+          right: 10px;
+          width: 40px;
+          height: 40px;
+          background-color: $white_color;
+          @include displayCenter(center, center);
+          border-radius: 50%;
+          border: none;
+        }
+      }
+    }
+
+    .homepage_left_bottom {
+      display: flex;
+      gap: 26px;
+      margin-top: 30px;
+      cursor: pointer;
+      // .img_sample_one {
+      //   &:active {
+      //     border: 2px solid $brand_color;
+      //     border-radius: 10px;
+      //     opacity: 0.5;
+      //   }
+      // }
+    }
+  }
+  .homepage_right {
+    // background-color: yellow;
+    width: 350px;
+    .sneaker_company {
+      color: $brand_color;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: $text_color;
+    }
+    .price_wrapper {
+      display: flex;
+      margin-top: 20px;
+      .price {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .discount {
+        margin-left: 20px;
+        color: $brand_color;
+        padding: 0 5px;
+        border-radius: 2px;
+        background-color: #f3cab1;
+        font-size: 10px;
+        @include displayCenter(center, center);
+      }
+    }
+    .actual_mrp {
+      font-size: 12px;
+      color: $text_color;
+      font-weight: 600;
+    }
+    .btn_wrapper {
+      display: flex;
+      gap: 30px;
+      margin-top: 50px;
+      .number_of_products_wrapper {
+        display: flex;
+        background-color: #f6f8fc;
+        gap: 30px;
+        border-radius: 5px;
+        padding: 5px 10px;
+        width: 150px;
+        @include displayCenter(center, center);
+        .minus {
+          color: $brand_color;
+          font-size: 20px;
+        }
+        .count {
+          font-size: 12px;
+          @include displayCenter(center, center);
+        }
+        .plus {
+          color: $brand_color;
+          @include displayCenter(center, center);
+        }
+      }
+      .cart_wrapper {
+        display: flex;
+        background-color: $brand_color;
+        gap: 20px;
+        border-radius: 5px;
+        color: $white_color;
+        @include displayCenter(center, center);
+        width: 150px;
+        .cart {
+          @include displayCenter(center, center);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .homepage {
+    flex-wrap: wrap;
+    .homepage_left {
+      .homepage_left_top {
+      }
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+  .homepage {
+    flex-wrap: wrap;
+    padding: 0rem;
+    gap: 10px;
+    .homepage_left {
+      .homepage_left_top {
+        border-radius: 0;
+        width: 350px;
+        height: 350px;
+        .product {
+          width: 100%;
+          border-radius: 0;
+        }
+        .arrow_icons {
+          display: block !important;
+          gap: 50px !important;
+        }
+      }
+      .homepage_left_bottom {
+        display: none;
+      }
+    }
+    .homepage_right {
+      padding: 10px;
+      .btn_wrapper {
+        flex-wrap: wrap;
+        .number_of_products_wrapper {
+          width: 100%;
+          @include displayCenter(center, space-between);
+        }
+        .cart_wrapper {
+          width: 100%;
+          padding: 10px 50px;
+        }
+      }
+    }
+  }
+}
+
+.img_sample_one_active {
+  border: 2px solid $brand_color;
+  border-radius: 10px;
+  opacity: 0.5;
+}

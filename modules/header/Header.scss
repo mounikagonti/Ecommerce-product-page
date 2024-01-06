@@ -1,0 +1,92 @@
+.header {
+  .header_container {
+    padding: 1rem 0;
+    max-width: 1320px;
+    margin: auto;
+    @include displayCenter(center, space-between);
+    .header_left {
+      @include displayCenter(center, space-between);
+      cursor: pointer;
+      .menu_wrapper {
+        display: none;
+      }
+      .logo_wrapper {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      .header_options_wrapper {
+        position: relative;
+        margin-left: 50px;
+        font-size: 16px;
+        display: flex;
+        gap: 30px;
+        a {
+          text-decoration: none;
+          color: $text_color;
+        }
+      }
+    }
+    .header_right {
+      @include displayCenter(center, space-between);
+      cursor: pointer;
+      .shopping_cart_icon {
+        margin-right: 50px;
+        font-size: 20px;
+        color: $text_color;
+      }
+    }
+  }
+  hr {
+    max-width: 1320px;
+    margin: auto;
+    color: rgb(231, 228, 228);
+  }
+}
+
+@media screen and (max-width: $md) {
+  .header {
+    padding: 0 1rem;
+    .header_container {
+      .header_left {
+        .menu_wrapper {
+          display: block;
+          font-size: 25px;
+          .menu {
+            display: block;
+            @include displayCenter(center, center);
+          }
+          .close {
+            display: none;
+          }
+        }
+        .logo_wrapper {
+          margin-left: 15px;
+          font-size: 26px;
+        }
+        .header_options_wrapper {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.header_options_wrapper_mobile {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 30px;
+  background-color: $brand_color;
+  z-index: 10;
+  a {
+    color: $white_color;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
